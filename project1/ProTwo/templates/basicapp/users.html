@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Here are the users of this app</h1>
+        {% if users %}
+
+        <ol>
+            {% for person in users %}
+            <li>User Info</li>
+                <ul>
+                    <li>First Name: {{ person.first_name}}</li>
+                    <li>Last Name: {{ person.last_name }}</li>
+                    <li>Email Name: {{ person.email }}</li>
+                </ul>
+                {% endfor %}
+        </ol>
+        {% endif %}
+        <h2>Go to /users to see it</h2>
+    </body>
+</html>
